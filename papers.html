@@ -1,0 +1,42 @@
+---
+layout: default
+title: Papers
+description: Publications, preprints, and working notes.
+---
+
+<section class="wrap">
+  <div class="page-head prose">
+  <p class="eyebrow">Papers</p>
+  <h1>Publications &amp; preprints</h1>
+  <p class="lead">
+    Peer-reviewed work, arXiv preprints, and working notes. Everything here is
+    managed from a single file — <code>_data/papers.yml</code>.
+  </p>
+  </div>
+</section>
+
+<section class="wrap">
+  <ol class="paper-list paper-list--full">
+    {% for paper in site.data.papers %}
+    <li class="paper-item">
+      <p class="paper-meta">
+        {{ paper.venue }}{% if paper.year %} · {{ paper.year }}{% endif %}
+        {% if paper.status %}<span class="paper-status">{{ paper.status }}</span>{% endif %}
+      </p>
+      <h2 class="paper-title">{{ paper.title }}</h2>
+      {% if paper.authors %}<p class="paper-authors">{{ paper.authors }}</p>{% endif %}
+      {% if paper.summary %}<p class="paper-summary">{{ paper.summary }}</p>{% endif %}
+      <p class="paper-actions">
+        {% if paper.pdf   %}<a href="{{ paper.pdf | relative_url }}">PDF</a>{% endif %}
+        {% if paper.arxiv %}<a href="{{ paper.arxiv }}">arXiv</a>{% endif %}
+        {% if paper.code  %}<a href="{{ paper.code }}">Code</a>{% endif %}
+        {% if paper.doi   %}<a href="{{ paper.doi }}">DOI</a>{% endif %}
+      </p>
+    </li>
+    {% endfor %}
+  </ol>
+
+  {% if site.data.papers.size == 0 %}
+  <p class="empty">No papers listed yet. Add entries to <code>_data/papers.yml</code>.</p>
+  {% endif %}
+</section>
