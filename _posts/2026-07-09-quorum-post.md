@@ -40,7 +40,7 @@ Reasoning traces that *look* more insightful can correlate with **lower** condit
 
 State them together and one shape appears. In each case there is an **observable signal** — trace, explanation, benchmark score, tool-checked answer — that we read cheaply and treat as evidence of reasoning competence. And in each case that signal comes apart from the thing it is supposed to measure. Sometimes by accident; sometimes, under optimization pressure, adversarially.
 
-![The decoupling: plausibility does not imply correctness. A population of confident-and-wrong outputs sits in the lower-right — fluent enough to clear review, wrong enough to matter.](images/fig1_decoupling.png)
+![The decoupling: plausibility does not imply correctness. A population of confident-and-wrong outputs sits in the lower-right — fluent enough to clear review, wrong enough to matter.](_posts/images/fig1_decoupling.png)
 
 Call the general object these results circle the **Reasoning-Certificate Problem**: *there is no validated, decision-time observable that certifies reasoning, because every cheap signal is decoupled — sometimes adversarially — from the latent competence it is presumed to measure.* This makes both evaluation and optimization ill-posed: if the signal can be satisfied without the competence, then measuring it, or training against it, chases the signal and not the thing.
 
@@ -58,7 +58,7 @@ Consider the anti-counterfeit hologram on a passport. Any single security featur
 
 Quorum applies this to decisions. Attach several genuinely different, independent probes to a model's decision — including at least one tied to a **verifiable external fact** — and issue a "certified" seal only when a quorum of them agree. Any one probe is weak and gameable. The bet is that faking all of them *coherently* is exponentially harder than faking any one.
 
-![One decision in, five decision-orthogonal probes, one verdict out. The output is not "more accurate AI" but calibrated abstention: Certified or Escalate.](images/fig6_flow.png)
+![One decision in, five decision-orthogonal probes, one verdict out. The output is not "more accurate AI" but calibrated abstention: Certified or Escalate.](_posts/images/fig6_flow.png)
 
 Five probe families, chosen to view the decision from different angles:
 
@@ -76,7 +76,7 @@ To reason about "hard to fake" we need a picture. Represent the model's internal
 
 First, the model cannot produce arbitrary states. Coherent outputs live on a **low-dimensional reachable manifold** $\mathcal{M}$ — a curved surface inside the vast ambient space. A faker does not get to move anywhere; a fake must stay *on* $\mathcal{M}$, or it isn't something the model would actually output.
 
-![The reachable manifold. A sound decision z* sits on the surface; the decision direction w is the way a corruption would have to push to flip the outcome. A coherent cheat stays on the manifold and carries decision weight — yet slips past the probes.](images/fig3_reachable_manifold.png)
+![The reachable manifold. A sound decision z* sits on the surface; the decision direction w is the way a corruption would have to push to flip the outcome. A coherent cheat stays on the manifold and carries decision weight — yet slips past the probes.](_posts/images/fig3_reachable_manifold.png)
 
 Second, a certificate's probes only "see" certain directions — call their union the **covered subspace** $\mathcal{U}$. A corruption breaks the certificate if and only if it does three things at once:
 
@@ -92,7 +92,7 @@ $$
 
 If $\eta_k \to 0$, no reachable, decision-carrying corruption can evade the probes: the certificate is fake-resistant. If $\eta_k$ stays bounded away from $0$, a coherent cheat exists.
 
-![Left: redundant probes cover a slice that misses the decision direction — a coherent cheat lives in the red escape gap. Right: decision-orthogonal probes cover the decision-relevant span; the escape gap collapses.](images/fig2_manifold_geometry.png)
+![Left: redundant probes cover a slice that misses the decision direction — a coherent cheat lives in the red escape gap. Right: decision-orthogonal probes cover the decision-relevant span; the escape gap collapses.](_posts/images/fig2_manifold_geometry.png)
 
 The picture also tells you *which* probes help. Adding a probe that covers directions you already cover does nothing to $\eta_k$. Adding a probe that covers a **new, decision-relevant** direction shrinks it. This is the difference between redundant and **decision-orthogonal** probes — and it is the whole game.
 
@@ -108,7 +108,7 @@ In a tractable linear–Gaussian model — where $\mathcal{M}$, $w$, and the pro
 *Plain:* if your probes are genuinely different (decision-orthogonal), the chance a fake slips through drops faster than any polynomial as you add probes. If they're redundant, it flatlines at a positive floor forever.
 *Precise:* under decision-orthogonality the false-certification rate is super-polynomially small in $k$; under redundancy it is bounded below by a constant independent of $k$.
 
-![Same probe count, three regimes. Diversity — not count — drives fake-resistance to zero. Verified in Monte-Carlo simulation.](images/fig4_make_or_break.png)
+![Same probe count, three regimes. Diversity — not count — drives fake-resistance to zero. Verified in Monte-Carlo simulation.](_posts/images/fig4_make_or_break.png)
 
 **Result 3 — An unconditional query lower bound.**
 *Plain:* an adversary who can only probe the system by sampling it — no privileged access — needs an exponential number of tries to forge a diverse certificate. This one needs no assumptions.
@@ -196,7 +196,7 @@ Until recently, this is where the argument stalled: $\mathcal{M}$ and $w$ for a 
 
 Anthropic's [*Verbalizable Representations Form a Global Workspace in Language Models*](https://transformer-circuits.pub/2026/workspace/) (Gurnee, Sofroniew, … Lindsey, July 2026) presents evidence that LLMs maintain a small, privileged set of representations — the **J-space** — that they can report, deliberately modulate, and reason with, atop a much larger volume of automatic processing. They surface it with the **Jacobian lens**: an averaged input–output Jacobian composed with the model's unembedding, reading what an internal activation is *poised to say*. Crucially it is a **causal** readout, and a refinement of the older, correlational logit lens.
 
-![Most of the representation is automatic processing; the decision lives in the J-space. A certificate must cover the decision-relevant part of that workspace — whatever it leaves uncovered and reachable is the escape gap.](images/fig5_jspace_eta.png)
+![Most of the representation is automatic processing; the decision lives in the J-space. A certificate must cover the decision-relevant part of that workspace — whatever it leaves uncovered and reachable is the escape gap.](_posts/images/fig5_jspace_eta.png)
 
 Three of its findings land directly on this framework:
 
