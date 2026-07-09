@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<article class="post wrap">
+  <header class="post-head prose">
+    <p class="eyebrow">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      {% if page.reading %} · {{ page.reading }}{% endif %}
+    </p>
+    <h1>{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="lead">{{ page.subtitle }}</p>{% endif %}
+    {% if page.tags and page.tags.size > 0 %}
+    <ul class="tags">
+      {% for t in page.tags %}<li>{{ t }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+  </header>
+
+  <div class="post-body prose">
+    {{ content }}
+  </div>
+
+  <footer class="post-foot prose">
+    <a class="back" href="{{ '/blog.html' | relative_url }}">← All writing</a>
+  </footer>
+</article>

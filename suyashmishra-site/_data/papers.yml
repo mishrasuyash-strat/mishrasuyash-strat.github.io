@@ -1,0 +1,70 @@
+# ─────────────────────────────────────────────────────────────
+#  YOUR PAPERS
+#  Each "- " block below is one paper. Copy a block to add more.
+#  Delete these examples and replace with your real work.
+#
+#  Fields:
+#    title    (required)
+#    venue    e.g. "arXiv", "NeurIPS", "Working paper"
+#    year
+#    status   optional badge, e.g. "Preprint", "Under review", "Published"
+#    authors  optional, e.g. "S. Mishra"
+#    summary  one or two sentences
+#    featured  true  -> also shown on the homepage (keep this to ~3 papers)
+#    pdf      a file you put in the /papers/ folder, e.g. "/papers/mypaper.pdf"
+#    arxiv    full URL, e.g. "https://arxiv.org/abs/XXXX.XXXXX"
+#    code     full URL to a repo
+#    doi      full URL
+# ─────────────────────────────────────────────────────────────
+
+- title:   "Reasoning certificates for high-stakes AI decisions"
+  venue:   "arXiv"
+  year:    2026
+  status:  "Preprint"
+  authors: "S. Mishra"
+  summary: >-
+    A framework for attaching verifiable certificates to the reasoning behind
+    high-stakes automated decisions, with a measurable escape-gap statistic.
+  featured: true
+  arxiv:   ""      # TODO: paste the arXiv URL
+  pdf:     ""      # or drop a PDF in /papers/ and point here
+  code:    ""
+
+- title:   "Equilibrium-guided personalization: game dynamics for decision systems"
+  venue:   "arXiv"
+  year:    2026
+  status:  "Preprint"
+  authors: "S. Mishra"
+  summary: >-
+    Personalised decisions modelled as equilibria — combining Bayesian updating,
+    Stackelberg structure, and evolutionary dynamics.
+  featured: true
+  arxiv:   ""
+  pdf:     ""
+  code:    ""
+
+- title:   "Gluing local judgments: a sheaf-theoretic view of multi-agent coordination"
+  venue:   "Working paper"
+  year:    2026
+  status:  "Draft"
+  authors: "S. Mishra"
+  summary: >-
+    Using sheaves and topology to formalise when many local, specialised agents
+    can be glued into a single consistent global decision.
+  featured: true
+  arxiv:   ""
+  pdf:     ""
+  code:    ""
+
+- title:   "Value-aware forgetting for long-horizon decision agents"
+  venue:   "arXiv"
+  year:    2026
+  status:  "Preprint"
+  authors: "S. Mishra"
+  summary: >-
+    A memory framework that forgets by value rather than recency, with
+    pre-registered empirical results.
+  featured: false
+  arxiv:   ""
+  pdf:     ""
+  code:    ""
