@@ -38,5 +38,4 @@ list, with links, is on the [papers]({% link papers.html %}) page.
 ## Elsewhere
 
 The fastest way to see current thinking is the [writing]({% link blog.html %}); more formal
-work lives on the [papers]({% link papers.html %}) page. Profile links are in the footer —
-add or remove them by editing `_config.yml`.
+work lives on the [papers]({% link papers.html %}) page.
