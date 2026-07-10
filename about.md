@@ -19,9 +19,9 @@ own time I formalise the ideas that make that possible and publish them openly.
 
 ## In industry
 
-I'm a senior AI product leader at Roche in Zürich, where I own an enterprise
-generative-AI programme and lead a cross-functional team of thirty-plus
-engineers and business stakeholders. The flagship is **Content AI Studio** — a
+I'm a senior AI product leader at Roche in Zürich, where I am part of enterprise
+generative-AI programme and lead a cross-functional team to drive innovation and 
+scalibility of AI solution. The flagship is **Intelligent Content Hub** — a
 platform that takes modular, compliant healthcare content from analysis through
 build and circulation end to end. In production it has roughly halved content
 production time and cut cost by more than 60%, alongside markedly faster
@@ -31,7 +31,7 @@ replaced.
 The work spans the full stack of applied AI: LLM and retrieval architectures,
 multi-agent workflows, vision-language systems for long-form video, and the
 evaluation, observability, and governance layers that make all of it safe to
-ship under MLR/GxP constraints. Across roles I've spent 12+ years building
+ship under MLR/GxP constraints. Across roles I've spent 14+ years building
 production AI in regulated industries — pharmaceutical, energy, and automotive.
 
 ## Research
