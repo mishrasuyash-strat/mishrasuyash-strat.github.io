@@ -1,0 +1,18 @@
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <span class="brand-mark">{% include seal.svg %}</span>
+      <span class="brand-name">{{ site.title }}</span>
+    </a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden>
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+
+    <nav class="site-nav" aria-label="Primary">
+      {%- assign p = page.url -%}
+      <a href="{% link blog.html %}" {% if p contains '/blog' %}aria-current="page"{% endif %}>Writing</a>
+      <a href="{% link papers.html %}" {% if p contains '/papers' %}aria-current="page"{% endif %}>Papers</a>
+      <a href="{% link about.md %}" {% if p contains '/about' %}aria-current="page"{% endif %}>About</a>
+    </nav>
+  </div>
+</header>
