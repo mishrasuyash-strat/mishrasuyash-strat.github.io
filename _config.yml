@@ -54,3 +54,4 @@ exclude:
   - Gemfile.lock
   - vendor
   - .gitignore
+  - sharp/
